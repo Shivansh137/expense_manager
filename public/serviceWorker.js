@@ -4,8 +4,8 @@ self.addEventListener("install",(event)=>{
     event.waitUntil(
         caches.open(chacheName).then((cache)=>{
             cache.addAll([
-                '/assets/index-P6LYkqov.js',
-                '/assets/index-Obk6xh9Z.css',
+                '/assets/index-B_5mOc2D.js',
+                '/assets/index-CO_jszTE.css',
                 '/index.html',
                 '/'
             ])
