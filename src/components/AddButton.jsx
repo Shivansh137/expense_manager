@@ -1,11 +1,11 @@
 import React from 'react'
-import { MdAdd, MdPlusOne } from 'react-icons/md'
+import { MdAdd } from 'react-icons/md'
 
-const AddButton = ({setShowForm}) => {
+const AddButton = ({ setShowForm }) => {
   return (
-    <button onClick={() => setShowForm(true)} className='fixed bottom-4 right-4 bg-primary/85 shadow-lg text-4xl p-4 rounded-full text-white '>
-       <MdAdd />
-        </button>
+    <button onClick={() => setShowForm(true)} className='fixed bottom-6 right-6 bg-primary/85 shadow-lg text-3xl p-4 rounded-full text-white '>
+      <MdAdd />
+    </button>
   )
 }
 

@@ -1,8 +1,16 @@
-*{
+* {
   font-family: "Varela Round", sans-serif;
 }
-#root{
+
+body {
+  background-color: antiquewhite;
+}
+
+#root {
+  position: relative;
+  background-color: white;
   min-height: 100vh;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }

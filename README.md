@@ -1,8 +1,47 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Expense Managing App
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Features
+
+- Add Transactions (debit/credit) in (online/cash) mode.
+- Track your expenses.
+- Keep record of all your expenses.
+- Save the data locally.
+
+
+## Tech Stack
+
+**Client:** ReactJS, tailwindCSS
+
+
+
+
+## Screenshots
+
+**Drive Link:** https://drive.google.com/drive/folders/1nfbw-spXIvQzKeAtQhfVZO1VYSZ2--Nb?usp=sharing
+
+
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  https://github.com/Shivansh137/expense_manager.git
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
