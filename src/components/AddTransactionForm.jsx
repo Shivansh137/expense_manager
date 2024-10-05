@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const AddForm = ({ setList, showForm, setShowForm, setOnlineBal, onlineBal, cashBal, setCashBal }) => {
+const AddTransactionForm = ({ setList, showForm, setShowForm, setOnlineBal, onlineBal, cashBal, setCashBal }) => {
   const [amount, setAmount] = useState('');
   const [mode, setMode] = useState("");
   const [description, setDesc] = useState("");
@@ -84,4 +84,4 @@ const AddForm = ({ setList, showForm, setShowForm, setOnlineBal, onlineBal, cash
   )
 }
 
-export default AddForm
+export default AddTransactionForm

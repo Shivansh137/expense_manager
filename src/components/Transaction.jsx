@@ -1,18 +1,19 @@
 import React from 'react'
 import { MdQrCodeScanner } from "react-icons/md";
 import { TbCoinRupee } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
-const Transaction = ({ amount, description, type, mode, date }) => {
+const Transaction = ({ id,amount, description, type, mode, date }) => {
   return (
-    <div className='w-full gap-4 items-center flex px-4 py-4 border-b'>
+    <Link to={`/edit/${id}`} className='w-full gap-4 items-center flex px-4 py-4 border-b'>
       {
-        mode === "online" ? <MdQrCodeScanner size={35} /> :
-          <TbCoinRupee size={35} />
+        mode === "online" ? <MdQrCodeScanner size={30} /> :
+          <TbCoinRupee size={30} />
       }
       <div>
         <p className='font-semibold'>{description}</p>
         <p className='text-xs text-gray-500'>
-          {new Date(date).toLocaleDateString('en-US', { hour: '2-digit', minute: '2-digit' })}
+          {new Date(date).toLocaleDateString('en-GB',{ hour: '2-digit', minute: '2-digit' })}
         </p>
       </div>
 
@@ -21,7 +22,7 @@ const Transaction = ({ amount, description, type, mode, date }) => {
           &#8377;{amount}
         </p>
       </div>
-    </div>
+    </Link>
   )
 }
 
