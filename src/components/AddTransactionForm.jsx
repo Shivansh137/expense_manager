@@ -50,15 +50,15 @@ const AddTransactionForm = ({ setList, showForm, setShowForm, setOnlineBal, onli
   }
 
   return (
-    <div className={`${showForm ? "block" : "hidden"} fixed w-full h-full max-w-xl bg-black/70 flex items-center justify-center`}>
-      <form className=' overflow-hidden gap-6 bg-white rounded-lg w-[85%]' onSubmit={(e) => e.preventDefault()}>
+    <div className={`${showForm ? "block" : "hidden"} fixed w-full h-full max-w-xl bg-black flex items-center justify-center`}>
+      <form className=' border border-dark2 text-white overflow-hidden gap-4 bg-dark2 rounded-lg w-[85%] px-2 py-4' onSubmit={(e) => e.preventDefault()}>
 
-        <p className='text-center bg-primary p-4 text-white font-bold'>Add Transaction</p>
+        <p className='text-center bg-primary p-4 text-lg text-white font-bold'>Add Transaction</p>
 
-        <div className='flex flex-col overflow-hidden gap-6 p-4 pt-8'>
-          <input value={amount} onChange={(e) => setAmount(e.target.value)} className='px-4 py-3 focus:outline-none text-black rounded-md bg-neutral-100' type="number" placeholder='Amount' />
+        <div className='flex flex-col overflow-hidden gap-6 p-4 pt-4'>
+          <input value={amount} onChange={(e) => setAmount(e.target.value)} className='px-4 py-3 ring-1 ring-pink caret-pink font-bold text-white  focus:outline-none text-black rounded-md bg-dark2' type="number" placeholder='Amount' />
 
-          <input value={description} onChange={(e) => setDesc(e.target.value)} className='px-4 py-3 focus:outline-none rounded-md bg-neutral-100' type="text" placeholder='Description' />
+          <input value={description} onChange={(e) => setDesc(e.target.value)} className='px-4 py-3  ring-1 ring-pink caret-pink font-bold text-white focus:outline-none rounded-md bg-dark2' type="text" placeholder='Description' />
 
           <div className='flex items-center justify-center gap-2 px-8'>
             <label htmlFor="">
@@ -75,9 +75,9 @@ const AddTransactionForm = ({ setList, showForm, setShowForm, setOnlineBal, onli
 
           <div className='flex gap-2'>
             <button type='button' onClick={() => { handleSubmit("debit") }} className=' w-full bg-[red]/20 text-red-500 font-bold border-0 text-sm p-3 rounded-md'>Debit</button>
-            <button type='button' onClick={() => { handleSubmit("credit") }} className=' w-full bg-green-500/20 font-bold text-green-500 text-sm border-0 p-3 rounded-md'>Credit</button>
+            <button type='button' onClick={() => { handleSubmit("credit") }} className=' w-full bg-[#1a3522] text-[#38b05f] font-bold text-sm border-0 p-3 rounded-md'>Credit</button>
           </div>
-          <button onClick={() => setShowForm(false)} type="button" className='text-gray-500 text-sm'>Cancel</button>
+          <button onClick={() => setShowForm(false)} type="button" className='text-light text-sm'>Cancel</button>
         </div>
       </form>
     </div>

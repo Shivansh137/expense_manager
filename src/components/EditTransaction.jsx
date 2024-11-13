@@ -215,14 +215,15 @@ const EditTransaction = ({ list, onlineBal, cashBal, setOnlineBal, setCashBal })
     }
     return (
         <div className={`fixed w-full h-full max-w-xl bg-black/80 flex items-center justify-center`}>
-            <form className=' overflow-hidden gap-6 bg-white rounded-lg w-[85%]' onSubmit={(e) => e.preventDefault()}>
+            <form className=' overflow-hidden gap-6 bg-dark2 text-white p-4 rounded-lg w-[85%]' onSubmit={(e) => e.preventDefault()}>
 
                 <p className='text-center bg-primary p-4 text-white font-bold'>Edit Transaction</p>
 
-                <div className='flex flex-col overflow-hidden gap-6 p-4 pt-8'>
-                    <input value={amount} onChange={(e) => setAmount(e.target.value)} className='px-4 py-3 focus:outline-none text-black rounded-md bg-neutral-100' type="number" placeholder='Amount' />
+                <div className='flex flex-col overflow-hidden gap-6 p-4 pt-4'>
 
-                    <input value={description} onChange={(e) => setDesc(e.target.value)} className='px-4 py-3 focus:outline-none rounded-md bg-neutral-100' type="text" placeholder='Description' />
+                    <input value={amount} onChange={(e) => setAmount(e.target.value)} className='px-4 py-3 focus:outline-none  rounded-md bg-dark2 ring-1 ring-pink' type="number" placeholder='Amount' />
+
+                    <input value={description} onChange={(e) => setDesc(e.target.value)} className='px-4 py-3 focus:outline-none rounded-md bg-dark2 ring-1 ring-pink' type="text" placeholder='Description' />
 
                     <div className='flex items-center justify-center gap-2 px-8'>
                         <label htmlFor="">
@@ -237,9 +238,9 @@ const EditTransaction = ({ list, onlineBal, cashBal, setOnlineBal, setCashBal })
 
                     </div>
 
-                    <div className='flex gap-2'>
+                    <div className='flex gap-4'>
                         <button type='button' onClick={() => { handleSubmit("debit") }} className=' w-full bg-[red]/20 text-red-500 font-bold border-0 text-sm p-3 rounded-md'>Debit</button>
-                        <button type='button' onClick={() => { handleSubmit("credit") }} className=' w-full bg-green-500/20 font-bold text-green-500 text-sm border-0 p-3 rounded-md'>Credit</button>
+                        <button type='button' onClick={() => { handleSubmit("credit") }} className=' w-full  bg-[#1a3522] text-[#38b05f]  font-bold text-green-500 text-sm border-0 p-3 rounded-md'>Credit</button>
                     </div>
 
                     <button onClick={handleDelete} type="button" className='text-red-500 flex items-center justify-center gap-2'> <MdDelete /> Delete Transaction</button>

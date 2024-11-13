@@ -21,7 +21,7 @@ const Wrapper = ({ mode, balance }) => {
 }
 const Balance = ({ onlineBal, cashBal }) => {
   return (
-    <div className='bg-primary px-4 w-full'>
+    <div className='bg-pink px-4 w-full'>
       <div className='flex gap-4'>
         <Wrapper mode='online' balance={onlineBal} />
         <Wrapper mode='cash' balance={cashBal} />
